@@ -1,0 +1,72 @@
+<div style="width:100px;min-height:100px;" class="cmd tooltips cmd-widget cursor" data-type="info" data-subtype="numeric" data-cmd_id="#id#" title="#collectDate#">
+	
+	<center>
+        <div style="font-weight: bold;font-size : 12px;#hideCmdName#">#name_display#</div>
+        <span style="font-size: 3.5em;" id="iconCmd#id#"></span>
+	
+    </center>
+	<script>
+		var param_type 	= "#type#";	// Get the parameter : 
+									// defaut, cafetiere, secheServiette, clim, chauffeEau, 
+									// chaudiere, congel, frigo, laveVaisselle, laveLinge, 
+									// videoProj, tele, xbox, lampe, spot, aspirateur, hotte
+									// prise, aquarium, arrosage
+		var value_type	= "defaut";
+		var value_state	= "off";
+		
+		if ( param_type == "defaut"
+				|| param_type == "imprimante"
+				|| param_type == "jeedom"
+				|| param_type == "jeedomS1"
+				|| param_type == "jeedomS2"
+				|| param_type == "jeedomS3"
+				|| param_type == "paw"
+				|| param_type == "frigo"
+				|| param_type == "zibase"
+				|| param_type == "laveLinge"
+				|| param_type == "synologyW"
+				|| param_type == "tele"
+				|| param_type == "xbox"
+				|| param_type == "lampe"
+				|| param_type == "couleur"
+				|| param_type == "spot"
+				|| param_type == "aspirateur"
+				|| param_type == "cameras"
+				|| param_type == "prise"
+				|| param_type == "synologyB"
+            	|| param_type == "kodi"
+				|| param_type == "BarreDeSon"
+				|| param_type == "Wii"
+				|| param_type == "flower"
+				|| param_type == "RepWifi"
+				|| param_type == "son"
+				|| param_type == "moustiques"
+				|| param_type == "livebox2"
+				|| param_type == "entree"
+				|| param_type == "hueV1"
+				|| param_type == "presence"
+				|| param_type == "chouchou"
+				|| param_type == "maman"
+				|| param_type == "papa"
+				|| param_type == "gateway"
+            	|| param_type == "humidite"
+            	|| param_type == "temp"
+            	|| param_type == "lampeAll"
+            	|| param_type == "porteAll"
+            	|| param_type == "phase" ) { 
+			value_type = param_type;
+		}
+		
+		if ('#state#' == '1') { value_state = "on"; }
+		else if ('#state#' == '0') { value_state = "off"; }
+		else if ('#state#' == '-1') { value_state = "wrn"; }
+//		} else {
+//			value_state = "off";
+//		}
+
+		var iconPath = "plugins/widget/core/template/dashboard/cmd.info.numeric.widget-appareils-ONOFF/" + value_type + "_" + value_state + ".png";
+		
+		$('#iconCmd#id#').append('<img src="' + iconPath + '" />');
+		
+	</script>
+</div>
