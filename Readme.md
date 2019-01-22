@@ -4,12 +4,12 @@ vous trouverer la representation ON, OFF, Wrn si il existe.
 
 Le widget accepte 3 valeur numeric 0(Off), 1(On), -1(Wrn)
 
-vous devez spécifier le type et la taille
+vous devez spécifier le type ( a recuperer dans la colonne type) et la taille ( 30x30 , 50x50 , 90x90)
 
 
 
 
-Icône OFF | Icône ON | Icône Veille | Name
+Icône OFF | Icône ON | Icône Veille | Type
 
 <img src="/cmd.info.numeric.widget-appareils-ONOFF/90x90/ambilight_off.png" alt="ambilight_off"/>|<img src="/cmd.info.numeric.widget-appareils-ONOFF/90x90/ambilight_on.png" alt="ambilight_on"/>|<img src="/cmd.info.numeric.widget-appareils-ONOFF/90x90/ambilight_off.png" alt="ambilight_wrn"/> | ambilight  
 <img src="/cmd.info.numeric.widget-appareils-ONOFF/90x90/asusrt88u_off.png" alt="asusrt88u_off"/>|<img src="/cmd.info.numeric.widget-appareils-ONOFF/90x90/asusrt88u_on.png" alt="asusrt88u_on"/>|<img src="/cmd.info.numeric.widget-appareils-ONOFF/90x90/asusrt88u_off.png" alt="asusrt88u_wrn"/> | asusrt88u  
