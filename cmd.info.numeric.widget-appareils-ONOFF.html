@@ -6,6 +6,7 @@
 	
     </center>
 	<script>
+	jeedom.cmd.update['#id#'] = function(_options){
 		var param_taille = "#taille#"; // 30x30,50x50,90x60
 		var param_type 	= "#type#";	// Get the parameter : 
 									// defaut, cafetiere, secheServiette, clim, chauffeEau, 
@@ -118,16 +119,19 @@
 			value_type = param_type;
 		}
 		
-		if ('#state#' == '1') { value_state = "on"; }
-		else if ('#state#' == '0') { value_state = "off"; }
-		else if ('#state#' == '-1') { value_state = "wrn"; }
-//		} else {
-//			value_state = "off";
-//		}
-
+		 if (parseInt(_options.display_value) == 1) {
+			value_state = "on";
+		} else if (parseInt(_options.display_value) == 0) {
+			value_state = "off";
+		} else {
+			value_state = "wrn";
+		}
 		var iconPath = "plugins/widget/core/template/dashboard/cmd.info.numeric.widget-appareils-ONOFF/" + value_taille + "/" + value_type + "_" + value_state + ".png";
 		
 		$('#iconCmd#id#').append('<img src="' + iconPath + '" />');
+		$('.cmd[data-cmd_id=#id#]').attr('title','Valeur du '+_options.valueDate+', collectÃ©e le '+_options.collectDate);
+      }
+      jeedom.cmd.update['#id#']({display_value:'#state#',valueDate:'#valueDate#',collectDate:'#collectDate#',alertLevel:'#alertLevel#'});
 		
 	</script>
 </div>
